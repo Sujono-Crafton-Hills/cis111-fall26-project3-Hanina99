@@ -1,0 +1,188 @@
+/*Color variables used in website */
+
+:root {
+    --main-color: rgb(85, 127, 117);
+    --link-color: rgb(45, 74, 68);
+}
+
+/*Basic page styling, including background color and default font */
+
+body {
+    margin: 0;
+    background-color: var(--main-color);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Heading font and band/album image positioning */
+
+h1, h2 {
+    font-family: "Courier New", monospace;
+}
+
+.band-photo {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.album-cover{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Title, navigation links, and audio player styling */
+
+
+.links{
+    text-align:center; 
+    margin: 0 15px;
+    font-size: 30px;
+    font-family: "Courier New", monospace;
+    font-weight:bold;
+}
+
+
+.title {
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+    font-size:40px;
+}
+
+audio {
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+/* Header uses flexbox */
+
+header {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   padding: 20px;
+}
+
+/* Arranges navigation links in a centered row with space between them */
+
+.links {
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+   margin-top: 15px;
+   flex-wrap: wrap;
+}
+
+/* Sets navigation link colors and adds an underline when hovered over */
+
+.links a {
+   text-decoration: none;
+   color: var(--link-color);
+}
+
+.links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Sets width and spacing of main page content */ 
+
+main {
+   max-width: 900px;
+   margin: 0 auto;
+   padding: 20px;
+}
+
+/*Styles tables */
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+}
+
+th, td {
+   border: 1px solid #333;
+   padding: 8px;
+   text-align: left;
+}
+
+/* Centers footer */
+
+footer {
+   text-align: center;
+   padding: 20px;
+}
+
+/* Responsive layout for smaller screens */
+
+
+@media (max-width: 600px) {
+   .links {
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+   }
+
+   main {
+      padding: 10px;
+   }
+
+   table {
+      font-size: 14px;
+   }
+}
+
+/* Adds extra spacing around timeline section on the homepage */
+
+#history {
+    margin-top: 20px;
+    padding: 15px;
+}
+
+/* Styling for interactive buttons */
+
+button {
+    background-color: var(--link-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: white;
+    color: var(--link-color);
+}
+
+/* Styling for dropdown menu */
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Spacing for interactive sections */
+
+#recommendations,
+#member-selector {
+    margin-top: 25px;
+    padding: 15px;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+/* Spacing for displayed results */
+
+#song-recommendation,
+#member-information {
+    margin-top: 15px;
+    padding: 10px;
+}
